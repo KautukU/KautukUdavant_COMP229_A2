@@ -1,0 +1,127 @@
+<%- include partials/header.ejs %>
+
+
+<%- include partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+
+    
+    <% if (title == "Home") { %>
+      <div class="jumbotron" style="background-color: #e0e0e0;">
+        <div class="column_attr clearfix" >
+          <h1 class="display-2"><b>Hi, my name is Kautuk</b></h1>
+          <h3>My goal is to work as a <br><b>Game Programmer</b> in the near future. <br>Or a Software Programmer</h3>
+          <a class="btn btn-primary" href="/products" role="button">My Products</a>
+        </div>
+      </div>
+
+    
+    <% } else if (title == "About") { %>
+      <div class="jumbotron" style="background-color: #e0e0e0;">
+        <div>
+          <img src="/Assets/images/Kautuk.jpg" alt="Kautuk png" class="img-thumbnail" width="250" height="250" style="float:right"/>
+        </div>
+        <h1 class="display-2"><b>Kautuk Udavant</b></h1>
+        <h5>I was born in India, my family moved to Canada in 2009 when i was about 8 years old I used to play a lot of games, my all time favorite game back then was Mario Kart 7. Few years later I was in high school. This is when I started to learn about coding such as HTML, Python, and JavaScript. I ended up really liking coding but i also liked gaming so I decided merge the two and pursue it as a career. I look forward to keep learning new things about coding and learn all the different languages in the following years.</h5>
+      </div>
+    
+    <% } else if (title == "Products") { %>
+      <div class="jumbotron" style="background-color: #e0e0e0;">
+        <h1 class="display-2"><b>My Products</b></h1>
+        <h3 class="display-4">These are a few of my assignments that i have worked on. Feel free to download.</h3>
+        <ul class="list-unstyled">
+          <li class="media">
+            <a href="https://github.com/KautukU/PacMan"><img src="/Assets/images/pac-man.png" class="mr-3" alt="PAC-MAN" width="64" height="64"></a>
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">PAC-MAN</h5>
+              This is a link to my github repository for the pac-man game I recreated.
+            </div>
+          </li>
+          <li class="media my-4">
+            <a href="https://github.com/KautukU/RollingStone"><img src="/Assets/images/red-ball.png" class="mr-3" alt="red-ball" width="64" height="64"></a>
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">Group Project</h5>
+              This is a link to my github repository for the group project my friends and I made last year in game programming 1.
+            </div>
+          </li>
+          <li class="media">
+            <a href="/Assets/downloadables/Assignment5_COMP123.zip"><i class="fas fa-6x fa-file-code mr-3"></i></a>
+            <div class="media-body">
+              <h5 class="mt-0 mb-1">GPA Calculator</h5>
+              This is my GPA calculator assignment for COMP123.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    <% } else if (title == "Services") { %>
+      <div class="jumbotron" style="background-color: #e0e0e0;">
+        <img src="/Assets/images/teaching.png" alt="teaching img" width="150" height="120" style="float: right;" >
+        <h1 class="display-2"><b>My Services</b></h1>
+        
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm text-center">
+              <ul class="list-unstyled mb-0">
+                <li class="mt-4">
+                  I offer many services such as:
+                </li>
+                <li class="mt-4">
+                  <p>Making a website</p>
+                </li>
+                <li class="mt-4">
+                  <p>Making an mobile app</p>
+                </li>
+                <li class="mt-4">
+                  <p>Making games</p>
+                </li>
+              </ul>
+            </div>
+            <img src="/Assets/images/internet.png" alt="Internet img" width="150" height="120" style="float: left;" >
+            <div class="col-sm text-center">
+              <ul class="list-unstyled mb-0">
+                <li class="mt-4">
+                  Tutoring for different coding languages like:
+                </li>
+                <li class="mt-4">
+                  <p>HTML</p>
+                </li>
+                <li class="mt-4">
+                  <p>Java</p>
+                </li>
+                <li class="mt-4">
+                  <p>C#</p>
+                </li>
+                <li class="mt-4">
+                  <p>C++</p>
+                </li>
+                <li class="mt-4">
+                  <p>Java</p>
+                </li>
+              </ul>
+            
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+      
+    <% } else if (title == "Contact") { %>
+      <div class="jumbotron" style="background-color: #e0e0e0;">
+        <%- include partials/contact.ejs %>
+
+      </div>
+     <% } %> 
+
+      
+  </main>
+
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
+
