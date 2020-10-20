@@ -6,7 +6,7 @@
   <!-- Main Content -->
   <main class="container">
     <div class="row">
-        <div class="offset-md-2 col-md-8">
+        <div class="offset-md-2 col-md-9">
             <h1><%= title %></h1>
 
             <% if(typeof displayName == 'string' && displayName) { %>
@@ -18,15 +18,15 @@
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <% if(typeof displayName == 'string' && displayName) { %>
-                        <th class="text-center col-2">Name</th>
-                        <th class="text-center col-2">password</th>
-                        <th class="text-center col-3">Email</th>
+                        <th class="text-center col-3">Name</th>
+                        <th class="text-center col-2">Password</th>
+                        <th class="text-center col-4">Email</th>
                         <th class="text-center col-1">Age</th>
-                        <th class="text-center col-2"></th>
-                        <th class="text-center col-2"></th>
+                        <th class="text-center col-1"></th>
+                        <th class="text-center col-1"></th>
                     <% } else { %>
                         <th class="text-center col-3">Name</th>
-                        <th class="text-center col-3">password</th>
+                        <th class="text-center col-3">Password</th>
                         <th class="text-center col-4">Email</th>
                         <th class="text-center col-2">Age</th>
                     <% } %>
@@ -37,15 +37,15 @@
                 <% for(let count = 0; count < EmployeeList.length; count++) { %>
                     <tr class="d-flex">
                         <% if(typeof displayName == 'string' && displayName) { %>
-                            <td class="text-center col-2"><%= EmployeeList[count].name %></td>
+                            <td class="text-center col-3"><%= EmployeeList[count].name %></td>
                             <td class="text-center col-2"><%= EmployeeList[count].password %></td>
-                            <td class="text-center col-3"><%= EmployeeList[count].email %></td>
+                            <td class="text-center col-4"><%= EmployeeList[count].email %></td>
                             <td class="text-center col-1"><%= EmployeeList[count].age %></td>            
-                            <td class="text-center col-2">
+                            <td class="text-center col-1">
                                 <a href="/employee-list/edit/<%= EmployeeList[count]._id %>" class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                             </td>
-                            <td class="text-center col-2">
+                            <td class="text-center col-1">
                                 <a href="/employee-list/delete/<%= EmployeeList[count]._id %>" class="btn btn-danger btn-sm">
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                             </td>

@@ -15,7 +15,7 @@ module.exports.displayEmployeeList = (req, res, next) => {
         }
         else
         {
-            //console.log(employeeList);
+            //console.log(EmployeeList);
 
             res.render('employee/list', 
             {title: 'Employees', 
